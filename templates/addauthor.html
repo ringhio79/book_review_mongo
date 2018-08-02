@@ -1,0 +1,12 @@
+{% extends 'base.html' %} {%block content%}
+
+<h1> add an author </h1>
+
+    <form method="POST" action="/add_author">
+        <input type="text" name="name" placeholder="Enter Name"/>
+        <input type="text" name="bio" placeholder="about the author"/>
+        
+        <input type="submit"/>
+    </form>
+
+{% endblock %}

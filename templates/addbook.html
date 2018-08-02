@@ -1,0 +1,16 @@
+{% extends 'base.html' %} {%block content%}
+
+<h1> add a book </h1>
+    <form method="POST" action="/add_book">
+        <input type="text" name="title" placeholder="Title"/>
+        <input type="text" name="author" placeholder="Author"/>
+        <input type="text" name="date_published" placeholder="Year of Publication"/>
+        <input type="text" name="genre" placeholder="Genre"/>
+        <input type="text" name="synopsis" placeholder="Synopsis"/>
+        <input type="text" name="cover_image" placeholder="Cover"/>
+        
+        
+        <input type="submit"/>
+    </form>
+
+{% endblock %}
