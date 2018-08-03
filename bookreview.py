@@ -2,13 +2,15 @@ import os
 from flask import Flask, request, render_template, redirect, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+from flask.ext.images import resized_img_src
 
 app = Flask(__name__)
-
 app.config["MONGO_DBNAME"] = 'book_reviews'
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
-
+app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
+
+images = resized_img_src(app)
 
 @app.route('/')
 def home_page():

@@ -23,9 +23,11 @@
                     
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">New Task</a></li>
-                    <li><a href="">Manage Categories</a></li>
+                    <li><a href="{{url_for('home_page')}}">Home</a></li>
+                    <li><a href="{{url_for('authors')}}">Authors</a></li>
+                    <li><a href="{{url_for('book_list')}}">Book list</a></li>
+                    <li><a href="{{url_for('add_book')}}">Add a book</a></li>
+                    <li><a href="{{url_for('add_author')}}">Add an Author</a></li>
                 </ul>
             </div>
         </nav>
