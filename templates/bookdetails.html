@@ -4,7 +4,7 @@
     
     
     <p> Book Title {{ book.title }}</p>
-    <p> Author{{ book.author }}</p>
+    <p> Author: <a href="/author_details/{{author._id}}">{{ book.author }}</a></p>
     <p> Date published {{ book.date_published }}</p>
     <p> Genre {%for book in books%} {{ book.genre }} {% endfor%}</p>
     <p> Synopsis {{book.synopsis }}</p>
