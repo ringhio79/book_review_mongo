@@ -1,12 +1,22 @@
 {% extends 'base.html' %} {%block content%}
 
-<h1>{{author.name.title() }}</h1>
+<h2>{{ author.f_name.title() + " " + author.l_name.title() }}</h2>
     
+<div class="row">
+    <div class="col s4">
+        <img src="{{author.photo}}"></img>
+    </div>
+    <div class="col s8">
+        <p>{{ author.bio }}</p>
+        <p><i class="fab fa-facebook-square"></i></p>
+    </div>
     
-    <p> Mini-Bio {{ author.bio }}</p>
+</div>
+
+<hr>
     
    
-    <h4>List of books </h4>
+    <h5>List of books </h5>
     
     {% for book in books %}
     <p><a href='{{url_for('book_details', books_id = book._id) }}'>{{book.title.title()}}</a></p>

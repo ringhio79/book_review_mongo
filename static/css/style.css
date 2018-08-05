@@ -1,3 +1,15 @@
-/*.activator{*/
-    
-/*}*/
+body {
+    background-image: url("../img/book-pages-as-a-heart_4460x4460.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.card_style {
+    background-color: white;
+    opacity: 0.9
+}
+
+.nav-wrapper {
+    background-color: #a9cce3;
+}

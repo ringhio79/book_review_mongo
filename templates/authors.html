@@ -1,11 +1,21 @@
 {% extends 'base.html' %} {%block content%}
 
-<h1>Authors </h1>
-    
+<h2>Authors </h2>
+<div class="row">
     {% for author in authors %}
-    <p> <a href="/author_details/{{author._id}}"> {{author.name.title() }}</a> </p>
-    <p> bio {{author.bio}} </p>
+
+
+    <div class="col-sm-3 col-md-4">
+        <div class="thumbnail">
+            <img src="{{author.photo}}" alt="{{author.name}}" height="240" width="200"></img>
+            <div class="caption">
+                <h5>{{ author.f_name.title() + " " + author.l_name.title() }}</h5>
+                <p>{{author.bio[:75]}}</p>
+                <p><a href="/author_details/{{author._id}}" class="btn btn-danger" role="button">Button</a></p>
+            </div>
+        </div>
+    </div>
+
     {% endfor %}
-    
-    
+</div>
 {% endblock %}

@@ -2,7 +2,7 @@ import os
 from flask import Flask, request, render_template, redirect, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
-from flask.ext.images import resized_img_src
+# from flask_images import resized_img_src
 
 app = Flask(__name__)
 app.config["MONGO_DBNAME"] = 'book_reviews'
@@ -10,7 +10,7 @@ app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
-images = resized_img_src(app)
+# images = resized_img_src(app)
 
 @app.route('/')
 def home_page():
@@ -19,11 +19,12 @@ def home_page():
 @app.route('/book_list')
 def book_list():
     books = mongo.db.books.find()
-    return render_template('booklist.html',  books = books)
+    return render_template('booklist.1.html',  books = books)
 
 @app.route('/authors')
 def authors():
     return render_template('authors.html', authors = mongo.db.authors.find())
+    # return render_template('authors.html', authors = mongo.db.authors.find().sort({"l_name":1}))
 
     
 @app.route('/book_details/<books_id>')
@@ -57,7 +58,7 @@ def author_details_byname(author_name):
 def add_author():
     if request.method == 'POST':
         mongo.db.authors.insert_one(request.form.to_dict())
-        return redirect(url_for('home_page'))
+        return redirect(url_for('authors'))
     else:
         return render_template('addauthor.html')
         
