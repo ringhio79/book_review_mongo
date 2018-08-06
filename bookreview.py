@@ -62,6 +62,21 @@ def add_author():
     else:
         return render_template('addauthor.html')
         
+@app.route('/add_review/<book_id>')
+def add_review(book_id):
+    return render_template('addreview.html', book_id=book_id)
+
+
+@app.route('/submit_review', methods=['POST'])
+def submit_review():
+    book_id = request.form.get("book_id")
+    review = request.form.get("user_review")
+    book = mongo.db.books.find_one({"_id": ObjectId(book_id)})
+    print(book['user_reviews'])
+    book['user_reviews'].append(review)
+    
+    mongo.db.books.update({"_id": ObjectId(book_id)}, book)
+    return redirect('/')
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),

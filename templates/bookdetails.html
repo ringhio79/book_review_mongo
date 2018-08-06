@@ -8,8 +8,8 @@
     </div>
     <div class="col s10">
         <p> Author: <a href="/author_details/{{author._id}}">{{ book.author.title() }}</a></p>
-    <p> Date published {{ book.date_published }}</p>
-    <p> Genre {%for book in books%} {{ book.genre }} {% endfor%}</p>
+        <p> Published: {{ book.date_published }}</p>
+        <p> Genre: {%for g in book.genre %} {{ g }} {% endfor%}</p>
     </div>
 </div>
 
@@ -17,25 +17,21 @@
 
 <div class="row">
     <div class="col s12">
-         <p> Synopsis {{book.synopsis }}</p>
+        <p> {{book.synopsis }}</p>
     </div>
-    
-</div>
-    
-<hr>
 
-<div class="row">
-    <div class="col s12">
-        <h5>Reader Reviews:</h5>
-        <p>{{book.user_review}}</p>
-        
-        
-        
-    </div>
-    
 </div>
-    
-    
-    
-    
-{% endblock %}
+
+<hr>
+<h5>Reader Reviews:</h5>
+<div class="row">
+    {% for review in book.user_reviews %}
+    <div class="col s12">
+        <p> {{review}} </p>
+        <br>
+        {% endfor %}
+    </div>
+
+</div>
+
+<a href="{{ url_for('add_review', book_id = book._id) }}">Leave review</a> {% endblock %}

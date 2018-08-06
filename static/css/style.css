@@ -10,6 +10,23 @@ body {
     opacity: 0.9
 }
 
+.card .card-content {
+    padding: 10px 24px;
+}
+
+.card-action {
+     padding: 10px 24px;
+}
+
 .nav-wrapper {
     background-color: #a9cce3;
+}
+
+.header {
+    color: #ffab40;
+}
+
+.form-background {
+    background-color: white;
+    opacity: 0.6;
 }
