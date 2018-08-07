@@ -29,4 +29,19 @@ body {
 .form-background {
     background-color: white;
     opacity: 0.6;
+    position: static;
+    z-index: 0;
+}
+
+.author-details img {
+    max-width: 240px;
+    height: auto;
+
+}
+
+.thumbnail img {
+    max-height: 220px;
+    width: auto;
+    padding: 10px;
+   
 }

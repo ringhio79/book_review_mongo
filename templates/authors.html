@@ -1,3 +1,5 @@
+
+
 {% extends 'base.html' %} {%block content%}
 
 <h2>Authors </h2>
@@ -5,12 +7,11 @@
     {% for author in authors %}
 
 
-    <div class="col-sm-3 col-md-4">
+    <div class="col s3 col m4">
         <div class="thumbnail">
-            <img src="{{author.photo}}" alt="{{author.name}}" height="240" width="200"></img>
+            <img src="{{author.photo}}" alt="{{author.name}}"></img>
             <div class="caption">
                 <h5>{{ author.f_name.title() + " " + author.l_name.title() }}</h5>
-                <p>{{author.bio[:75]}}</p>
                 <p><a href="/author_details/{{author._id}}" class="btn btn-danger" role="button">Author's page</a></p>
             </div>
         </div>
