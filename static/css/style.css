@@ -33,6 +33,10 @@ body {
     z-index: 0;
 }
 
+.thumbnail {
+    max-width: 200px
+}
+
 .author-details img {
     max-width: 240px;
     height: auto;
