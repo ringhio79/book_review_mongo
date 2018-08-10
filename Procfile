@@ -1,1 +1,1 @@
-web: python bookreview.py
+web: gunicorn bookreview.py
