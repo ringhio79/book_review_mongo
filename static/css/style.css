@@ -5,47 +5,60 @@ body {
     background-size: cover;
 }
 
+.nav-wrapper {
+    background-color: #a9cce3;
+}
+
+/*-------book list page ------*/
+
 .card_style {
-    background-color: white;
-    opacity: 0.9
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 .card .card-content {
     padding: 10px 24px;
 }
 
-.card-action {
-     padding: 10px 24px;
-}
 
-.nav-wrapper {
-    background-color: #a9cce3;
+.card-image img {
+    position: relative;
+    height: 200px;
+    width: auto;
 }
 
 .header {
     color: #ffab40;
 }
 
-.form-background {
-    background-color: white;
-    opacity: 0.6;
-    position: static;
-    z-index: 0;
-}
+
+/*-------author details ------*/
+
 
 .thumbnail {
-    max-width: 200px
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: -5px 5px 8px -1px rgba(184,182,184,1);
+    border-radius: 10px;
+    height: auto;
+    width: 220px;
+    margin: 10px;
 }
 
-.author-details img {
-    max-width: 240px;
-    height: auto;
-
+.thumbnail-content {
+    position: relative;
+    padding: 10px;
+    text-align: center;
 }
 
 .thumbnail img {
-    max-height: 220px;
-    width: auto;
-    padding: 10px;
-   
+    border-radius: 15px;
+    height: 240px;
+    width: 180px;
+}
+
+/*-------forms ------*/
+
+
+.form-background {
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.5);
 }

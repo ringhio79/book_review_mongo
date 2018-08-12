@@ -3,7 +3,6 @@
 
 <head>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css" />
@@ -18,8 +17,8 @@
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{url_for('home_page')}}">Home</a></li>
-                    <li><a href="{{url_for('authors')}}">Authors</a></li>
                     <li><a href="{{url_for('book_list')}}">Book list</a></li>
+                    <li><a href="{{url_for('authors')}}">Authors</a></li>
                     <li><a href="{{url_for('add_book')}}">Add a book</a></li>
                     <li><a href="{{url_for('add_author')}}">Add an Author</a></li>
                 </ul>
@@ -28,8 +27,8 @@
 
         <ul class="sidenav" id="mobile-demo">
             <li><a href="{{url_for('home_page')}}">Home</a></li>
-            <li><a href="{{url_for('authors')}}">Authors</a></li>
             <li><a href="{{url_for('book_list')}}">Book list</a></li>
+            <li><a href="{{url_for('authors')}}">Authors</a></li>
             <li><a href="{{url_for('add_book')}}">Add a book</a></li>
             <li><a href="{{url_for('add_author')}}">Add an Author</a></li>
         </ul>

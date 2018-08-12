@@ -11,15 +11,15 @@
         <input type="text" name="cover_image" placeholder="Cover" />
         <p>Genre:</p>
         <div class="row">
-        {% for genre in genres %}
-        <div class="col s2">
-        <label>
+            {% for genre in genres %}
+            <div class="col s2">
+                <label>
             <input type="checkbox" value="{{genre}}" name="{{genre}}"/>
             <span>{{genre}}</span>
         </label>
+            </div>
+            {% endfor %}
         </div>
-        {% endfor %}
-</div>
 
     </div>
     <br>

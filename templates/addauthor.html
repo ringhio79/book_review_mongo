@@ -2,12 +2,14 @@
 
 <h2> Add an Author </h2>
 
-    <form method="POST" action="/add_author">
-        <input type="text" class="txtlowercase" name="f_name" placeholder="Enter First Name"/>
-        <input type="text" class="txtlowercase" name="l_name" placeholder="Enter Last Name"/>
-        <input type="text" name="bio" placeholder="about the author"/>
-        
-        <input type="submit"/>
-    </form>
+<form method="POST" action="/add_author">
+    <div class="form-background">
+        <input type="text" class="txtlowercase" name="f_name" placeholder="Enter First Name" />
+        <input type="text" class="txtlowercase" name="l_name" placeholder="Enter Last Name" />
+        <input type="text" name="bio" placeholder="about the author" />
+    </div>
+    <br>
+    <input type="submit" />
+</form>
 
 {% endblock %}

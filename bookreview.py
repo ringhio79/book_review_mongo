@@ -17,7 +17,7 @@ def home_page():
 @app.route('/book_list')
 def book_list():
     books = mongo.db.books.find()
-    return render_template('booklist.1.html',  books = books)
+    return render_template('booklist.html',  books = books)
     
 @app.route('/book_details/<books_id>')
 def book_details(books_id):
@@ -28,7 +28,7 @@ def book_details(books_id):
 
 @app.route('/add_book', methods=['POST', 'GET'])
 def add_book():
-    genres = ['Romance', 'Crime', 'Thriller', 'Biograpy', 'Science Fiction']
+    genres = ['Romance', 'Crime', 'Thriller', 'Biograpy', 'Sci-Fi']
     if request.method == 'POST':
         checked_genres = []
         for checkbox in genres:
