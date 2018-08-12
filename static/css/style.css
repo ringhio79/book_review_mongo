@@ -9,6 +9,13 @@ body {
     background-color: #a9cce3;
 }
 
+/*-------forms ------*/
+
+.form-background {
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
 /*-------book list page ------*/
 
 .card_style {
@@ -55,10 +62,11 @@ body {
     width: 180px;
 }
 
-/*-------forms ------*/
+/*-------Auth Details page ------*/
 
-
-.form-background {
+.author-details img {
     border-radius: 15px;
-    background-color: rgba(255, 255, 255, 0.5);
+    height: auto;
+    width: 180px;
 }
+
