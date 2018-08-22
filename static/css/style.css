@@ -46,7 +46,7 @@ body {
     box-shadow: -5px 5px 8px -1px rgba(184,182,184,1);
     border-radius: 10px;
     height: auto;
-    width: 220px;
+    width: 230px;
     margin: 10px;
 }
 
@@ -59,7 +59,8 @@ body {
 .thumbnail img {
     border-radius: 15px;
     height: 240px;
-    width: 180px;
+    width: 185px;
+    object-fit: cover;
 }
 
 /*-------Auth Details page ------*/
@@ -68,5 +69,19 @@ body {
     border-radius: 15px;
     height: auto;
     width: 180px;
+    object-fit: cover;
 }
 
+.author-details-background {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    padding: 25px;
+}
+
+/*-------Book Details page ------*/
+
+.book-details-background {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    padding: 25px;
+}
