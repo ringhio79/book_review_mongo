@@ -26,7 +26,7 @@
     <hr>
     <h5>Reader Reviews:</h5>
     <div class="row">
-        {% for review in book.user_reviews %}
+        {% for review in book.reader_reviews %}
         <div class="col s12">
             <p> {{review}} </p>
             <br>
@@ -35,8 +35,8 @@
     
     </div>
     
-    <a href="{{ url_for('add_review', book_id = book._id) }}">Leave review</a>
     
+    <a href="{{ url_for('add_review', book_id = book._id) }}" class="waves-effect waves-light btn"><i class="material-icons right">create</i>Add a Review</a>
 </div>
 
 

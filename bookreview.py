@@ -85,9 +85,9 @@ def add_review(book_id):
 @app.route('/submit_review', methods=['POST'])
 def submit_review():
     book_id = request.form.get("book_id")
-    review = request.form.get("user_review")
+    review = request.form.get("reader_review")
     book = mongo.db.books.find_one({"_id": ObjectId(book_id)})
-    book['user_reviews'].append(review)
+    book['reader_reviews'].append(review)
     mongo.db.books.update({"_id": ObjectId(book_id)}, book)
     return redirect('/')
 
