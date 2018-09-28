@@ -5,12 +5,11 @@
     {% for author in authors %}
 
 
-    <div class="col s12 col m4">
+    <div class="col s12 col m6 col l4">
         <div class="thumbnail">
             <div class="thumbnail-content">
                 <img src="{{author.photo}}" alt="{{author.name}}"></img>
-                <h5>{{ author.f_name.title() + " " + author.l_name.title() }}</h5>
-                <p><a href="/author_details/{{author._id}}" class="waves-effect waves-light btn">Author's page</a></p>
+                <br><a href="/author_details/{{author._id}}" class="waves-effect waves-light btn">{{ author.f_name.title() + " " + author.l_name.title() }}</a>
             </div>
         </div>
     </div>

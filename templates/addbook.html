@@ -1,9 +1,9 @@
 {% extends 'base.html' %} {%block content%}
 
 <h2> Add a Book </h2>
-
-<form method="POST" action="/add_book">
     <div class="form-background">
+<form method="POST" action="/add_book">
+
         <input type="text" name="title" placeholder="Title" />
         <input type="text" name="author" placeholder="Author" />
         <input type="text" name="date_published" placeholder="Year of Publication" />
@@ -12,7 +12,7 @@
         <p>Genre:</p>
         <div class="row">
             {% for genre in genres %}
-            <div class="col s2">
+            <div class="col s12 m4">
                 <label>
             <input type="checkbox" value="{{genre}}" name="{{genre}}"/>
             <span>{{genre}}</span>
@@ -20,12 +20,9 @@
             </div>
             {% endfor %}
         </div>
-
-    </div>
-    <br>
-    <input type="submit" />
+    <br><input class="btn" type="submit" />
 </form>
-
+</div>
 
 
 

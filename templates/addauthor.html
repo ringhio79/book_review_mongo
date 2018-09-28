@@ -1,15 +1,15 @@
 {% extends 'base.html' %} {%block content%}
 
 <h2> Add an Author </h2>
-
-<form method="POST" action="/add_author">
     <div class="form-background">
-        <input type="text" class="txtlowercase" name="f_name" placeholder="Enter First Name" />
-        <input type="text" class="txtlowercase" name="l_name" placeholder="Enter Last Name" />
-        <input type="text" name="bio" placeholder="about the author" />
+        <form method="POST" action="/add_author">
+        
+                <input type="text" class="txtlowercase" name="f_name" placeholder="Enter First Name" />
+                <input type="text" class="txtlowercase" name="l_name" placeholder="Enter Last Name" />
+                <input type="text" name="bio" placeholder="about the author" />
+           
+            <br><input class="btn" type="submit" />
+        
+        </form>
     </div>
-    <br>
-    <input type="submit" />
-</form>
-
 {% endblock %}
