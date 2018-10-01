@@ -4,12 +4,12 @@
     <div class="form-background">
         <form method="POST" action="/add_author">
         
-                <input type="text" class="txtlowercase" name="f_name" placeholder="Enter First Name" />
-                <input type="text" class="txtlowercase" name="l_name" placeholder="Enter Last Name" />
-                <input type="text" name="bio" placeholder="about the author" />
+                <input type="text" class="txtlowercase" name="f_name" placeholder="Enter First Name" required />
+                <input type="text" class="txtlowercase" name="l_name" placeholder="Enter Last Name" required/>
+                <textarea type="text" name="bio" placeholder="Author Bio" style="height:100px"required></textarea>
+                <input type="text" name="author_photo" placeholder="Author photo link" />
            
-            <br><input class="btn" type="submit" />
-        
+            <br><input class="btn" type="Submit" value="Add"/><a href="{{url_for('authors') }}" class="btn" role="button">Cancel</a> 
         </form>
     </div>
 {% endblock %}

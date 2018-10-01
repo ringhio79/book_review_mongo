@@ -8,12 +8,16 @@
     <div class="col m12 l6">
         <div class="card horizontal card_style">
             <div class="card-image">
-                <img src="{{book.cover_image}}">
+                {% if book.cover_image %}
+                <img src="{{book.cover_image}}" alt="{{book.title}}">
+                {% else %}
+                <img src="..static/img/anonbook.png" alt="{{book.title}}">
+                {% endif %}
             </div>
             <div class="card-stacked">
                 <div class="card-content">
                     <a href="{{ url_for('book_details', books_id = book._id) }}"><span style="color:#ffab40"><h5>{{ book.title.title() }}</h5></span></a>
-                    <p>{{book.synopsis[:90]}}<a href="{{ url_for('book_details', books_id = book._id) }}">... read more</a></p>
+                    <p>{{book.synopsis[:75]}}<a href="{{ url_for('book_details', books_id = book._id) }}">... read more</a></p>
                 </div>
                 <div class="card-action">
                     <a href="{{ url_for('author_details_byname', author_name = book.author) }}">{{ book.author.title() }}</a>

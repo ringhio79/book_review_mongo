@@ -3,11 +3,13 @@
 
 <h2> Add review </h2>
 
-
-    <form method="POST" action="/submit_review">
-        <input type="text" name="reader_review" placeholder="add your comments here"/>
+<div class="form-background">
+<form method="POST" action="/submit_review">
+        <textarea type="text" name="reader_review" placeholder="Please add your review" style="height:100px" required></textarea>
         <input type="hidden" name="book_id" value="{{book_id}}"/>
-        <input type="submit"/>
+        <br><input class="btn" type="Submit" value="Add"/>
+        <a href="{{ url_for('book_details', books_id = book_id) }}" class="btn" role="button">Cancel</a> 
     </form>
+</div>
 
 {% endblock %}

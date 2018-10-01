@@ -36,16 +36,31 @@ h1, h2 {
 
 p {
     font-family: 'Goudy Bookletter 1911', serif;
-    font-size: large;
+    font-size: large
 }
 
+textarea {
+    border-top: none;
+    border-right: none;
+    border-bottom-color: rgb(169, 169, 169);
+    border-left: none;
+}
 .nav-wrapper {
     background-color: #ff6666;
+}
+
+nav ul li {
+    font-family: 'Goudy Bookletter 1911', serif;
+} 
+
+nav ul li a {
+    font-size: 1.5em;
 }
 
 /*-------home ------*/
 .intro {
     margin-left: 20vw;
+    height:60px;
 }
 
 
@@ -86,7 +101,7 @@ p {
     
 }
 
-/*-------author details ------*/
+/*-------author list ------*/
 
 
 .thumbnail {
@@ -151,15 +166,21 @@ p {
     margin-bottom: 20px;
     padding: 25px;
 }
+
+.book-cover img {
+    float: left;
+    height: 200px;
+    width: auto;
+}
 /*-------Buttons--------*/
 
 .btn {
     background-color: #5499c9;
     color: #f5f5f5;
+    margin: 10px;
 }
 
 .btn:hover{
     background-color: #bfbfbf;
     color: #ff6666;
-    margin: 5px;
 }

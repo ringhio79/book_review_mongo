@@ -28,12 +28,16 @@ def book_details(books_id):
 
 @app.route('/add_book', methods=['POST', 'GET'])
 def add_book():
-    genres = ['Romance', 'Crime', 'Thriller', 'Biograpy', 'Sci-Fi']
+    genres = ['Romance', 'Crime', 'Thriller', 'Biograpy', 'Sci-Fi', 'Fiction']
+    reader_reviews = []
     if request.method == 'POST':
         checked_genres = []
         for checkbox in genres:
             value = request.form.get(checkbox)
-            checked_genres.append(value)
+            if value != None:
+                checked_genres.append(value)
+            else:
+                pass
             
         title = request.form[('title')]
         author = request.form[('author')]
@@ -41,8 +45,8 @@ def add_book():
         synopsis = request.form[('synopsis')]
         cover_image = request.form[('cover_image')]
         checked_genres = checked_genres
-            
-        new_book = {'title': title, 'author': author, 'date_published': date_published, 'synopsis': synopsis, 'cover_image': cover_image, 'genre': checked_genres}
+        print(checked_genres)
+        new_book = {'title': title, 'author': author.lower(), 'date_published': date_published, 'synopsis': synopsis, 'cover_image': cover_image, 'reader_reviews': reader_reviews, 'genre': checked_genres}
         inserted_book = mongo.db.books.insert_one(new_book)
         return redirect(url_for('book_details', books_id=inserted_book.inserted_id))
     else:
@@ -72,7 +76,8 @@ def add_author():
         l_name = request.form[('l_name')]
         bio = request.form[('bio')]
         name = f_name + " " + l_name
-        new_author = {'f_name': f_name.lower(), 'l_name': l_name.lower(), 'bio': bio, 'name': name}
+        author_photo = request.form[('author_photo')]
+        new_author = {'f_name': f_name.lower(), 'l_name': l_name.lower(), 'bio': bio, 'name': name, 'author_photo': author_photo}
         mongo.db.authors.insert(new_author)
         return redirect(url_for('authors'))
     else:
