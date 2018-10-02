@@ -4,28 +4,23 @@
 
 @media (max-width: 730px){
     body {
-        background-image: url("../img/book-stack-books-education-48126.jpg");
-        background-position: center;
-        background-attachment: fixed;
+        background-image: url("../img/background-neutral.jpg");
         background-size: cover;
     }
     .card .card-image img {
         display: none;
     }
-    
 }
 
 @media (min-width: 731px) {
     body {
-        background-image: url("../img/book-stack-books-education-48126.jpg");
+        background-image: url("../img/book-stack.jpg");
         background-position: left;
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-size: contain;
     }
 }
-
-
 h1, h2 {
     font-family: 'Dancing Script', cursive;
     text-align: right;
@@ -36,7 +31,7 @@ h1, h2 {
 
 p {
     font-family: 'Goudy Bookletter 1911', serif;
-    font-size: large
+    font-size: large;
 }
 
 textarea {
@@ -45,6 +40,8 @@ textarea {
     border-bottom-color: rgb(169, 169, 169);
     border-left: none;
 }
+
+/*-------navbar ------*/
 .nav-wrapper {
     background-color: #ff6666;
 }
@@ -57,10 +54,15 @@ nav ul li a {
     font-size: 1.5em;
 }
 
+.brand-logo img {
+    max-height: 65px;
+    width: auto;
+}
+
 /*-------home ------*/
 .intro {
-    margin-left: 20vw;
-    height:60px;
+    margin-left: 10vw;
+    text-align: justify;
 }
 
 
@@ -68,14 +70,34 @@ nav ul li a {
 
 .form-background {
     max-width: 600px;
-    margin-left: 20vw;
+    margin: auto;
     margin-bottom: 20px;
     border-radius: 15px;
     background-color: #f5f5f5;
     opacity: 0.95;
     padding: 10px;
+    overflow: hidden;
 }
 
+label {
+    font-size: medium;
+}
+/*-------Buttons--------*/
+
+.btn {
+    background-color: #5499c9;
+    color: #f5f5f5;
+    margin: 10px;
+}
+
+.btn:hover{
+    background-color: #bfbfbf;
+    color: #ff6666;
+}
+
+.btn-right {
+    float: right;
+}
 /*-------book list page ------*/
 
 .card_style {
@@ -169,18 +191,6 @@ nav ul li a {
 
 .book-cover img {
     float: left;
-    height: 200px;
-    width: auto;
-}
-/*-------Buttons--------*/
-
-.btn {
-    background-color: #5499c9;
-    color: #f5f5f5;
-    margin: 10px;
-}
-
-.btn:hover{
-    background-color: #bfbfbf;
-    color: #ff6666;
+    height: auto;
+    max-width: 130px;
 }

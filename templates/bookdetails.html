@@ -5,12 +5,17 @@
 <div class="book-details-background">
     <div class="row">
         <div class="col s12 m2 book-cover">
+            {% if book.cover_image%}
             <img src="{{ book.cover_image }}" alt="{{book.title}}"> </img>
+            {% else %}
+            <img src="../static/img/book-default.jpg" alt="no image available">
+            {% endif %}
         </div>
         <div class="col s12 m10">
             <p> Author: <a href="/author_details/{{author._id}}">{{ book.author.title() }}</a></p>
             <p> Published: {{ book.date_published }}</p>
             <p> Genre: {%for g in book.genre %} {{ g }} {% endfor%}</p>
+            
         </div>
     </div>
     
@@ -33,7 +38,8 @@
     
     
     
-    <a href="{{ url_for('add_review', book_id = book._id) }}" class="waves-effect waves-light btn"><i class="material-icons right">create</i>Add a Review</a>
+    <a href="{{ url_for('add_review', book_id = book._id) }}" class="btn"><i class="material-icons right">create</i>Add a Review</a>
+    
 </div>
 
 

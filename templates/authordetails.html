@@ -3,7 +3,12 @@
 <h2>{{ author.f_name.title() + " " + author.l_name.title() }}</h2>
 <div class="author-details-background">    
     <div class="row">
-        <p><img src="{{author.photo}}"></img>{{ author.bio }}</p>
+        {% if author.photo %}
+        <p><img src="{{author.photo}}" alt="{{author.name}}"></img>
+        {% else %}
+        <img src="../static/img/anonymous.png" alt="{{author.name}}"></img>
+        {% endif %}
+        {{ author.bio }}</p>
     </div>
     
     <hr>

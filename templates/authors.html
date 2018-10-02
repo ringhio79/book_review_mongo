@@ -5,7 +5,7 @@
     {% for author in authors %}
 
 
-    <div class="col s12 col m6 col l4">
+    <div class="col s12 m6 l4">
         <div class="thumbnail">
             <div class="thumbnail-content">
                 {% if author.photo %}
@@ -13,7 +13,7 @@
                 {% else %}
                 <img src="../static/img/anonymous.png" alt="{{author.name}}"></img>
                 {% endif %}
-                <br><a href="/author_details/{{author._id}}" class="waves-effect waves-light btn">{{ author.f_name.title() + " " + author.l_name.title() }}</a>
+                <br><a href="/author_details/{{author._id}}" class="btn">{{ author.f_name.title() + " " + author.l_name.title() }}</a>
             </div>
         </div>
     </div>
