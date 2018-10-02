@@ -2,6 +2,10 @@
 
 This web application is born out of the desire to share book recommendations with friends and family overseas. It allows a user to scroll through the current book titles and authors, add reviews and add additional books and authors if necessary. 
 
+## Live Link 
+The web app has been deployed on Heroku and may be accessed by clicking on this link:
+https://fortheloveofbooks.herokuapp.com/
+
 ## UX
  
 The navigation of this app is designed with simplicity in mind. It should be easy enough for an inexperienced user to navigate through without any issues.
