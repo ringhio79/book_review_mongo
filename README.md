@@ -51,24 +51,29 @@ This app has been manually tested for functionality and layout on different scre
     
 ## Deployment
 
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
+This project is deployed and hosted on Heroku which is linked to cloud-based MongoDB database. The process followed is detailed below:
 
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
-- Different values for environment variables (Heroku Config Vars)?
-- Different configuration files?
-- Separate git branch?
+1. Create procfile in the root directory 
 
-In addition, if it is not obvious, you should also describe how to run your code locally.
+2. Install gunicorn by running $ sudo pip3 install gunicorn
+
+3. Create requirements.txt Run command $ pip3 freeze --local > requirements.txt
+
+4. Create a new app on Heroku.
+
+5. Add the config settings for Heroku to connect to the MongoDB
+
+6. Connect Heroku to GitHub repository and hit deploy
 
 
 ## Credits
 
 ### Content
-- The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
+- Information on the books and the authors was taken from https://www.goodreads.com/
 
 ### Media
-- The photos used in this site were obtained from ...
+- Other images are taken from https://www.pexels.com/
+
 
 ### Acknowledgements
-
-- I received inspiration for this project from X
+- Thanks to the teachers and mentors at Code Institute for their constant support and patience throughout this course.
