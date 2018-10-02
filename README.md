@@ -77,3 +77,4 @@ This project is deployed and hosted on Heroku which is linked to cloud-based Mon
 
 ### Acknowledgements
 - Thanks to the teachers and mentors at Code Institute for their constant support and patience throughout this course.
+- Thanks to my sister for inspiring me to create this app so we can share our reading experiences even when we are apart.
