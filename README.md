@@ -3,8 +3,7 @@
 This web application is born out of the desire to share book recommendations with friends and family overseas. It allows a user to scroll through the current book titles and authors, add reviews and add additional books and authors if necessary. 
 
 ## Live Link 
-The web app has been deployed on Heroku and may be accessed by clicking on this link:
-https://fortheloveofbooks.herokuapp.com/
+The web app has been deployed on Heroku and may be accessed at [For the Love of Books](https://fortheloveofbooks.herokuapp.com/)
 
 ## UX
  
@@ -14,8 +13,10 @@ The navigation of this app is designed with simplicity in mind. It should be eas
 
 - Browsing Authors: Similar to the books, users can navigate through the author thumbnails. When clicking on an author's name the user will be taken to a new page with the author details and a list of books by that author.  The book titles in turn link to the book details. The user can then return to the author's page by clicking on the authors name or navigate to any other page through the navbar links.
 
-- Adding Books & Authors: There are dedicated pages to add books or authors.  The user may fill in the online form with the relevant information. The image field is not required as it may difficult for a user to locate an online image.  If no image is added then a default image will be added to the display when necessary.
+## Featurs
+- Adding Books & Authors: There are dedicated pages to add books or authors.  The user may fill in the online form with the relevant information. The image field is not required as it may difficult for a user to locate an online image.  If no image is added then a default image will be used to the display when necessary.
 
+- Adding a review: Users can add reviews to any book.  Given the restrictions imposed by not having any login feature there are no options to edit reviews but only to add.
 
 ## Features
 
@@ -35,9 +36,9 @@ In this section, you should go over the different parts of your project, and des
 - HTML & CSS
     - to create layout and styling of front end
 
-### Databases
+### Database
 - [MongoDB](https://www.mongodb.com/)
-    - to store data in the cloud and use the same database in prod and dev environments.
+    - storing data in the cloud and use the same database in prod and dev environments.
 
 ## Testing
 
@@ -71,6 +72,9 @@ This project is deployed and hosted on Heroku which is linked to cloud-based Mon
 
 
 ## Credits
+
+## Author
+This web app was created by Giselle Baldacchino as the final project for the Code Institute Fullstack Developer bootcamp.
 
 ### Content
 - Information on the books and the authors was taken from https://www.goodreads.com/
